@@ -3,9 +3,10 @@ const exphbs = require("express-handlebars");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 
+
 const app = express();
 const routes = require("./routes");
-const port = 3000;
+const port = process.env.PORT ?? 3000;
 // 1. mongoose.js 沒有匯出任何東西
 // 2. app.js 也不需要「再次」引用 mongoose.js 檔案
 // 3. 只需要在執行時，有跑這段就好。
